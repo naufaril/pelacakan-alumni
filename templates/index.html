@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sistem Pelacakan Alumni</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Sistem Pelacakan Alumni</h1>
+
+<h2>Tambah Alumni</h2>
+
+<div class="card">
+<div class="form">
+<input id="nama" placeholder="Nama">
+<input id="prodi" placeholder="Program Studi">
+<input id="tahun" placeholder="Tahun Lulus">
+<input id="email" placeholder="Email">
+<input id="kota" placeholder="Kota">
+
+<button onclick="addAlumni()">Tambah</button>
+</div>
+</div>
+
+<h2>Data Alumni</h2>
+
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>Program Studi</th>
+<th>Tahun Lulus</th>
+<th>Aksi</th>
+</tr>
+</thead>
+
+<tbody id="alumniTable">
+
+{% for a in alumni %}
+<tr>
+<td>{{a.nama}}</td>
+<td>{{a.program_studi}}</td>
+<td>{{a.tahun_lulus}}</td>
+<td>
+<button class="table-btn" onclick="track('{{a.nama}}')">Lacak</button></td>
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<h2>Hasil Pelacakan</h2>
+<div id="result"></div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

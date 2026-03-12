@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Ahmad Fauzi",
+        "tahun_lulus": 2020,
+        "program_studi": "Informatika",
+        "email": "ahmad@email.com",
+        "kota": "Jakarta"
+    },
+    {
+        "nama": "Siti Rahma",
+        "tahun_lulus": 2019,
+        "program_studi": "Sistem Informasi",
+        "email": "siti@email.com",
+        "kota": "Bandung"
+    },
+    {
+        "nama": "Trump",
+        "tahun_lulus": "2022",
+        "program_studi": "Elektro",
+        "email": "trump@president.us",
+        "kota": "WDC"
+    }
+]
