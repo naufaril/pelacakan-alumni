@@ -135,9 +135,6 @@ Pengujian sistem dilakukan untuk memastikan aplikasi berjalan dengan baik berdas
 
 ---
 
-## Pengembang
-
-Proyek ini dikembangkan sebagai bagian dari tugas pengembangan sistem pelacakan alumni pada lingkungan perguruan tinggi.
-
-**Nama:** Naufaril Ariq Attobari  
-**Program Studi:** Informatika  
+## Link publish web
+Website dapat diakses melalui
+https://pelacakan-alumni--naufaril.replit.app
