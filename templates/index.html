@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sistem Pelacakan Alumni</title>
+<title>Pelacakan Alumni</title>
 <link rel="stylesheet" href="/static/style.css">
+<script src="/static/script.js"></script>
 </head>
+
 <body>
 
-<h1>Sistem Pelacakan Alumni</h1>
+<div class="container">
 
-<h2>Tambah Alumni</h2>
+  <div class="header">
+    <h2>Dashboard Alumni</h2>
+    <a href="/logout">
+      <button class="logout">Logout</button>
+    </a>
+  </div>
 
-<div class="card">
-<div class="form">
-<input id="nama" placeholder="Nama">
-<input id="prodi" placeholder="Program Studi">
-<input id="tahun" placeholder="Tahun Lulus">
-<input id="email" placeholder="Email">
-<input id="kota" placeholder="Kota">
+  <br>
 
-<button onclick="addAlumni()">Tambah</button>
+  <input type="text" id="searchInput" placeholder="🔍 Cari alumni..." onkeyup="searchAlumni()">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Tahun</th>
+        <th>Prodi</th>
+        <th>Kota</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+
+    <tbody id="alumniTable"></tbody>
+  </table>
+
 </div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div id="popupResult"></div>
+  </div>
 </div>
-
-<h2>Data Alumni</h2>
-
-<table>
-<thead>
-<tr>
-<th>Nama</th>
-<th>Program Studi</th>
-<th>Tahun Lulus</th>
-<th>Aksi</th>
-</tr>
-</thead>
-
-<tbody id="alumniTable">
-
-{% for a in alumni %}
-<tr>
-<td>{{a.nama}}</td>
-<td>{{a.program_studi}}</td>
-<td>{{a.tahun_lulus}}</td>
-<td>
-<button class="table-btn" onclick="track('{{a.nama}}')">Lacak</button></td>
-</tr>
-{% endfor %}
-
-</tbody>
-
-</table>
-
-<h2>Hasil Pelacakan</h2>
-<div id="result"></div>
-
-<script src="/static/script.js"></script>
 
 </body>
 </html>
